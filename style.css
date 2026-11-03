@@ -67,3 +67,32 @@ footer {
     color: #888888; /* Тусклый текст для подвала */
     font-size: 14px;
 }
+/* --- Адаптация под мобильные телефоны --- */
+@media screen and (max-width: 768px) {
+    /* Уменьшаем заголовок на главной */
+    .main-title {
+        font-size: 42px; 
+    }
+    
+    /* Уменьшаем вопрос под заголовком */
+    .question-subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    /* Уменьшаем заголовок в каталоге */
+    .main-title[style*="font-size: 42px"] {
+        font-size: 32px !important;
+    }
+
+    /* Делаем отступы в шапке чуть меньше */
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
