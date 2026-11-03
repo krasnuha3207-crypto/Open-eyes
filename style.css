@@ -262,3 +262,25 @@ footer {
     background-color: #e63939;
     transform: scale(1.05);
 }
+/* Стили для закрепленной карточки в ленте */
+.article-item.pinned {
+    border-left: 4px solid #ff4c4c; /* Красная полоса */
+    background-color: #333333; /* Чуть светлее фона */
+}
+
+.meta-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.mini-badge {
+    background-color: #ff4c4c;
+    color: white;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
