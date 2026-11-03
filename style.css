@@ -96,3 +96,100 @@ footer {
         margin: 0 10px;
     }
 }
+/* --- Вертикальная лента статей --- */
+
+.feed-container {
+    max-width: 800px; /* Ограничиваем ширину для удобства чтения */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.feed-title {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.feed-subtitle {
+    color: #b0b0b0;
+    font-size: 18px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+}
+
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Расстояние между карточками */
+}
+
+/* Карточка статьи */
+.article-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #2a2a2a;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #555; /* Серая полоска слева */
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении (на компьютере) */
+.article-item:hover {
+    background-color: #333;
+    border-left-color: #ff4c4c; /* Полоска становится красной */
+    transform: translateX(5px); /* Легкий сдвиг вправо */
+}
+
+/* Иконка слева */
+.article-icon {
+    font-size: 30px;
+    color: #ff4c4c;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+/* Текстовый контент */
+.article-content {
+    flex: 1;
+}
+
+.article-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.article-content p {
+    margin: 0 0 15px 0;
+    color: #b0b0b0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Дата/статус */
+.article-meta {
+    font-size: 13px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Мобильная адаптация */
+@media screen and (max-width: 600px) {
+    .article-item {
+        flex-direction: column; /* На телефоне иконка встанет над текстом */
+        padding: 20px;
+    }
+    .article-icon {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    .feed-title {
+        font-size: 28px;
+    }
+}
