@@ -3,64 +3,67 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #2b2b2b; /* Темно-серый фон */
+    color: #e0e0e0; /* Светло-серый текст для контраста */
     line-height: 1.6;
-}
-
-/* Шапка сайта */
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px 40px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Главный блок (на весь экран) */
+.hero-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.logo {
+/* Красный заголовок */
+.main-title {
+    color: #ff4c4c; /* Яркий красный, который хорошо виден на темном фоне */
+    font-size: 64px;
+    font-weight: 900;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Подзаголовок с вопросом */
+.question-subtitle {
     font-size: 24px;
-    font-weight: bold;
+    color: #ffffff; /* Белый текст для максимальной читаемости */
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 0 50px 0;
+    line-height: 1.4;
 }
 
-nav a {
+/* Кнопка "Начать" */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #444444; /* Серая кнопка, чтобы не сливаться с фоном */
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Основная часть */
-main {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-h1 {
-    color: #2c3e50;
-}
-
-/* Блок с информацией (карточка) */
-.card {
-    background: #eef2f5;
-    padding: 20px;
-    border-left: 5px solid #3498db;
-    margin-top: 30px;
-    border-radius: 4px;
+.btn:hover {
+    background-color: #ff4c4c; /* При наведении становится красной */
+    transform: scale(1.05);
 }
 
 /* Подвал */
 footer {
     text-align: center;
     padding: 20px;
-    color: #7f8c8d;
+    color: #888888; /* Тусклый текст для подвала */
     font-size: 14px;
 }
